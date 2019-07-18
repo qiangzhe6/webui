@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.SimpleFormatter;
 
-import static autoframework.driver.logger.LoggerControler.getLogger;
+import static aw.driver.logger.LoggerControler.getLogger;
 
 /**
  * Created by lenovo on 2016/11/10.

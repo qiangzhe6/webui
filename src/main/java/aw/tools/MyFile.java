@@ -2,9 +2,7 @@ package aw.driver.tools;
 
 import aw.driver.logger.LoggerControler;
 import sun.rmi.runtime.Log;
-
 import java.io.File;
-
 import static aw.driver.logger.LoggerControler.getLogger;
 
 /**

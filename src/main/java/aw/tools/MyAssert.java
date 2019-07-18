@@ -22,12 +22,13 @@ public class MyAssert extends Assert {
      * Asserts that a condition is true. If it isn't,
      * an AssertionError, with the given message, is thrown.
      *
-     * @param condition the condition to evaluate
+     * @param condition  the condition to evaluate
      * @param message   the assertion error message
      */
     static public void assertTrue(boolean condition, String message) {
         if (!condition) {
             failNotEquals(condition, Boolean.TRUE, message);
+
         }
     }
 
@@ -73,7 +74,6 @@ public class MyAssert extends Assert {
     static public void fail(String message, Throwable realCause) {
         AssertionError ae = new AssertionError(message);
         ae.initCause(realCause);
-
         throw ae;
     }
 
