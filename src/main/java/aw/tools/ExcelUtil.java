@@ -1,20 +1,19 @@
-package aw.driver.tools;
+package aw.tools;
 
-import aw.driver.logger.LoggerControler;
+import aw.logger.LoggerControler;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
-
 import java.io.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-import static aw.driver.logger.LoggerControler.getLogger;
+import static aw.logger.LoggerControler.getLogger;
 
 /**
  * Created by lenovo on 2016/11/10.
@@ -299,7 +298,7 @@ public class ExcelUtil {
         // 获取该对象的class对象
         Class class_ = object.getClass();
         // 获得该类的所有属性
-        Field[] fields = class_.p7ou  k  ,;
+        Field[] fields =class_.getFields();
         // 读取excel数据
         // 获得指定的excel表
         HSSFSheet sheet = workbook.getSheet(sheetName);

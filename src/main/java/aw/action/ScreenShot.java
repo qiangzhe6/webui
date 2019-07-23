@@ -1,9 +1,9 @@
-package aw.driver.action;
+package aw.action;
 
-import aw.driver.driver.SeleniumDriver;
-import aw.driver.logger.LoggerControler;
+import aw.driver.SeleniumDriver;
+import aw.logger.LoggerControler;
 import aw.driver.tools.DateFormat;
-import aw.driver.tools.MyFile;
+import aw.tools.MyFile;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -12,13 +12,12 @@ import org.openqa.selenium.remote.Augmenter;
 
 import java.io.File;
 import java.io.IOException;
-
-import static autoframework.driver.logger.LoggerControler.getLogger;
+import static aw.logger.LoggerControler.getLogger;
 
 /**
  * Created by lenovo on 2016/11/12.必须要继承SeleniumDrivers
  */
-public class ScreenShot extends SeleniumDrivers {
+public class ScreenShot extends SeleniumDriver {
     static final LoggerControler log = LoggerControler.getLogger(ScreenShot.class);
     static String path = System.getProperties().getProperty("user.dir") + "/error/";
     /**

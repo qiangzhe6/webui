@@ -1,7 +1,7 @@
-package aw.driver.tools;
+package aw.tools;
 
-import aw.driver.action.ScreenShot;
-import aw.driver.logger.LoggerControler;
+import aw.action.ScreenShot;
+import aw.logger.LoggerControler;
 
 import org.testng.Assert;
 import org.testng.collections.Lists;

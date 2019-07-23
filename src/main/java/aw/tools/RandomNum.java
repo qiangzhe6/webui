@@ -1,8 +1,8 @@
-package aw.driver.tools;
+package aw.tools;
 
-import aw.driver.logger.LoggerControler;
+import aw.logger.LoggerControler;
 import java.util.Random;
-import static aw.driver.logger.LoggerControler.getLogger;
+import static aw.logger.LoggerControler.getLogger;
 
 /**
  * Created by lenovo on 2016/11/10.

@@ -1,12 +1,11 @@
 package aw.driver.tools;
 
-import aw.driver.logger.LoggerControler;
+import aw.logger.LoggerControler;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.SimpleFormatter;
 
-import static aw.driver.logger.LoggerControler.getLogger;
+import static aw.logger.LoggerControler.getLogger;
 
 /**
  * Created by lenovo on 2016/11/10.

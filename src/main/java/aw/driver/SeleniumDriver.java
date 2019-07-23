@@ -20,6 +20,7 @@ public class SeleniumDriver {
         } else {
             log.severe("你输入的" + browser + "浏览器不支持打开");
         }
+        return driver;
     }
     public static void closed(){
         driver.quit();

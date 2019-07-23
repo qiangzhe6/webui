@@ -1,12 +1,12 @@
 package aw.driver.action;
 
 import aw.driver.elements.WebElementUtils;
-import aw.driver.logger.LoggerControler;
+import aw.logger.LoggerControler;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
-import static aw.driver.logger.LoggerControler.getLogger;
+import static aw.logger.LoggerControler.getLogger;
 
 /**
  * Created by lenovo on 2016/11/8.
