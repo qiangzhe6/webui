@@ -15,5 +15,16 @@ public class AssertDemo {
         Assert.assertNotNull(a,"a为null");
     }
     @Test
-    public
+    public void assertEqual(){
+        String a="123";
+        String b="1234";
+        Assert.assertEquals(a,b);
+    }
+
+    @Test
+    public void assertNotEqual(){
+        String a="123";
+        String b="1234";
+        Assert.assertNotEquals(a,b);
+    }
 }
