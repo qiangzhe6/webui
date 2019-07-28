@@ -1,4 +1,4 @@
-package aw.driver.elements;
+package aw.elements;
 
 import aw.driver.SeleniumDriver;
 import org.openqa.selenium.*;

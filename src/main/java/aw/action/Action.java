@@ -1,6 +1,6 @@
-package aw.driver.action;
+package aw.action;
 
-import aw.driver.elements.WebElementUtils;
+import aw.elements.WebElementUtils;
 import aw.logger.LoggerControler;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
