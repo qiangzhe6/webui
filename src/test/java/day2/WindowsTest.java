@@ -20,7 +20,7 @@ public class WindowsTest {
     }
     @Test
     public void windowsTest(){
-        WebElementUtils.findElement(By.id("id01")).click();
+        WebElementUtils.findElement(By.className("open")).click();
         String handle1 = webDriver.getWindowHandle();
         for (String handles:webDriver.getWindowHandles()){
             if(handles.equals(handle1)){
@@ -29,7 +29,11 @@ public class WindowsTest {
             webDriver.switchTo().window(handles);
         }
         Suspend.suspend(5000);
-        WebElementUtils.findElement(By.id("kw")).sendKeys("haha");
+        WebElementUtils.findElement(By.id("user")).sendKeys("haha");
+        Suspend.suspend(5000);
+
+        webDriver.switchTo().window(handle1);
+        WebElementUtils.findElement(By.id("user")).sendKeys("haha");
         Suspend.suspend(5000);
     }
     @AfterTest

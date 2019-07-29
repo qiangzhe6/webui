@@ -23,7 +23,6 @@ public class RobotTest {
         String adress=System.getProperty("user.dir")+"\\selenium_html\\index.html";
         webDriver.get(adress);
         Suspend.suspend(1000);
-
     }
     @Test
     public void robot(){

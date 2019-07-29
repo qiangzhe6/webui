@@ -3,19 +3,14 @@ package day2;
 import aw.driver.SeleniumDriver;
 import aw.elements.WebElementUtils;
 import aw.tools.Suspend;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-
-import java.io.File;
-import java.io.IOException;
 
 public class ActionTest {
     WebDriver webDriver;
@@ -24,37 +19,34 @@ public class ActionTest {
         webDriver= SeleniumDriver.SeleniumDriver("Edge");
         String adress=System.getProperty("user.dir")+"\\selenium_html\\index.html";
         webDriver.get(adress);
-        Suspend.suspend(10000);
+        Suspend.suspend(1000);
     }
     @Test
-    public void click(){
-        WebElementUtils.findElement(By.className("btnSousuo")).click();
-        Suspend.suspend(10000);
-    }
-    @Test
-    public void sendkey(){
-        WebElementUtils.findElement(By.id("user")).sendKeys("张翠翠");
-        Suspend.suspend(10000);
-    }
-    @Test
-    public void AssertTrue(){
-        Assert.assertTrue(WebElementUtils.findElement(By.id("user")).isDisplayed());
-    }
-    @Test
-    public void AssertEable(){
-        Assert.assertTrue(WebElementUtils.findElement(By.xpath("/html/body/div/table/thead/tr/th[2]")).isEnabled());
+    public void rightClickTest(){
+
+        WebElement element= WebElementUtils.findElement(By.className("over"));
+        Actions actions=new Actions(webDriver);
+        actions.contextClick(element).perform();
+        Suspend.suspend(5000);
+        actions.click().perform();
+        actions.clickAndHold(element).perform();
+        Suspend.suspend(5000);
+        actions.release(element).perform();
+        Suspend.suspend(5000);
+        WebElement element1= WebElementUtils.findElement(By.name("identity"));
+        actions.click(element1).perform();
+        Suspend.suspend(5000);
+        WebElement element2= WebElementUtils.findElement(By.xpath("//*[@id=\"radio\"]/label[1]"));
+        actions.doubleClick(element2).perform();
+        Suspend.suspend(5000);
+        WebElement element3= WebElementUtils.findElement(By.xpath("//*[@id=\"radio\"]/label[4]"));
+        Point point=element3.getLocation();
+        actions.dragAndDropBy(element2,point.getX(),point.getY()).perform();
+        Suspend.suspend(5000);
+        actions.release(element2).perform();
+
     }
 
-    @Test
-    public void ScreenShot()throws IOException {
-        File file= ((TakesScreenshot)webDriver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(file,new File("D:\\myproject\\error\\baidu.png"));
-    }
-
-    @Test
-    public void getText(){
-        System.out.println(WebElementUtils.findElement(By.xpath("//*[@id=\"link\"]/a")).getText());
-    }
     @AfterTest
     public void closeBrowser(){
         SeleniumDriver.closed();
