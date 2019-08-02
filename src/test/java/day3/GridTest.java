@@ -1,6 +1,8 @@
 package day3;
 
+import aw.tools.Suspend;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.DataProvider;
@@ -28,6 +30,7 @@ public class GridTest {
             dc=DesiredCapabilities.firefox();
         }else if(browserName.equals("internet explorer")){
             dc=DesiredCapabilities.internetExplorer();
+            dc.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
         }else if(browserName.equals("Microsoft Edge")){
             dc=DesiredCapabilities.edge();
         }
@@ -38,6 +41,9 @@ public class GridTest {
             e.printStackTrace();
         }
         webDriver.get("https://www.baidu.com/");
+        Suspend.suspend(5000);
+        webDriver.quit();
+
     }
 
 
