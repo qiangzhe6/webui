@@ -26,5 +26,18 @@ public class OpenChromeDemo {
         }
         webDriver.quit();
     }
+    @Test
+    public void openFirefox(){
+        String path=System.getProperty("user.dir")+"\\drivers\\geckodriver.exe";
+        System.setProperty("webdriver.chrome.driver",path);
+        webDriver=new FirefoxDriver();
+        webDriver.get("https://www.baidu.com/");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        webDriver.quit();
+    }
 
 }

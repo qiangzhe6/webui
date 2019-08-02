@@ -1,0 +1,43 @@
+{
+  "capabilities": [
+    {
+      "browserName": "chrome",
+      "maxInstances": 5,
+      "platform": "WINDOWS",
+	  "version":"72",
+	  "webdriver.chrome.driver": "chromedriver.exe"
+    },
+    {
+      "browserName": "firefox",
+      "maxInstances": 5,
+      "platform": "WINDOWS",
+	  "version":"59",
+      "webdriver.chrome.driver": "geckodriver.exe"
+
+    },
+    {
+      "browserName": "internet explorer",
+      "maxInstances": 5,
+      "platform": "WINDOWS",
+      "version":"11",
+      "webdriver.ie.driver": "IEDriverServer.exe"
+    },
+    {
+      "browserName": "Microsoft Edge",
+      "maxInstances": 5,
+      "platform": "WINDOWS",
+      "version":"42",
+      "webdriver.ie.driver": "MicrosoftWebDriver.exe"
+    }
+
+
+  ],
+  "configuration": {
+    "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+    "maxSession": 10,
+    "port": 5555,
+    "register": true,
+    "registerCycle": 5000,
+    "hub": "http://192.168.60.1:4444"
+  }
+}
