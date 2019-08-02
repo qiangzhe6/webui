@@ -7,7 +7,7 @@ public class DataDrive {
     @DataProvider(name = "test")
     public  Object[][] data(){
         return new Object[][]{
-                {"1","aa"},
+                {"ch","aa"},
                 {"2","bb"},
                 {"3","cc"}
         };
