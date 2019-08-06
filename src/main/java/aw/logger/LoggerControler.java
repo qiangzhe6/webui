@@ -1,46 +1,32 @@
 package aw.logger;
 
+import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+
 import java.io.*;
-import java.util.Properties;
-import java.util.logging.Logger;
 
 /**
  * Created by lenovo on 2016/11/9.
  */
 public class LoggerControler {
     private static Logger logger=null;
-    private static LoggerControler loggCon=null;
     public static LoggerControler getLogger(Class<?> T) {
-        if(logger==null){
-            Properties props=new Properties();   //实例化一个Properties类，处理log4j.Properties文件
-            String proPath=System.getProperty("user.dir")+ File.separator+"config"+File.separator+"log4j.properties";
-            InputStream inputStream= null;
-            try {
-                inputStream = new FileInputStream(proPath);
-                props.load(inputStream);
-                //log4j的PropertyConfigurator类的configure方法输入数据流
-                PropertyConfigurator.configure(props);
-                logger= Logger.getLogger(String.valueOf(T));
-                loggCon=new LoggerControler();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return loggCon;
+        logger=Logger.getLogger(T);
+        PropertyConfigurator.configure("D:\\mydoc\\webui\\config\\log4j.properties");
+        return new LoggerControler();
     }
     //重写logger方法
-    public void config(String msg) {
-        logger.config(msg);
+    public static void debug(String msg) {
+        logger.debug(msg);
     }
-    public void info(String msg){
+    public static void info(String msg){
         logger.info(msg);
     }
-    public void warning(String msg) {
-        logger.warning(msg);
+    public static void warning(String msg) {
+        logger.warn(msg);
     }
-    public void severe(String msg) {
-        logger.severe(msg);
+    public static void severe(String msg) {
+        logger.error(msg);
     }
 
 }

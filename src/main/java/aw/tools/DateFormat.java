@@ -1,4 +1,4 @@
-package aw.driver.tools;
+package aw.tools;
 
 import aw.logger.LoggerControler;
 
@@ -21,7 +21,7 @@ public class DateFormat {
     private static SimpleDateFormat simpleDateFormat;
 
     public static String format(String type){
-        simpleDateFormat=new SimpleDateFormat();
+        simpleDateFormat=new SimpleDateFormat(type);
         String s=simpleDateFormat.format(new Date());
         log.info("当前时间为："+s);
         return s;

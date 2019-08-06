@@ -2,7 +2,7 @@ package aw.action;
 
 import aw.driver.SeleniumDriver;
 import aw.logger.LoggerControler;
-import aw.driver.tools.DateFormat;
+import aw.tools.DateFormat;
 import aw.tools.MyFile;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;

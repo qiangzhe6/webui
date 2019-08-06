@@ -1056,3 +1056,5 @@
 2019-07-26 20:45:14,332 DEBUG Forwarding quit on session CDBCF68C-B1A7-4750-AB55-75A49A715B3E to remote [org.apache.http.impl.conn.PoolingHttpClientConnectionManager]releaseConnection(line:320)Connection released: [id: 0][route: {}->http://localhost:42031][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
 2019-07-26 20:45:14,333 DEBUG Forwarding quit on session CDBCF68C-B1A7-4750-AB55-75A49A715B3E to remote [org.apache.http.impl.conn.PoolingHttpClientConnectionManager]closeIdleConnections(line:401)Closing connections idle longer than 0 SECONDS
 2019-07-26 20:45:14,334 DEBUG Forwarding quit on session CDBCF68C-B1A7-4750-AB55-75A49A715B3E to remote [org.apache.http.impl.conn.DefaultManagedHttpClientConnection]close(line:81)http-outgoing-0: Close connection
+2019-08-06 16:48:14,251 ERROR main [day5.LoggerTest]severe(line:29)this is error log
+2019-08-06 16:49:54,205 ERROR main [day5.LoggerTest]severe(line:29)this is error log
